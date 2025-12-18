@@ -15,45 +15,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
-    body {
-      font-family: system-ui, sans-serif;
+    :root{
+      --maxw: 900px;
+      --pad: 18px;
+      --radius: 14px;
+      --border: rgba(0,0,0,.12);
+      --muted: rgba(0,0,0,.72);
+    }
+
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       line-height: 1.6;
-      margin: 1.5em;
+      margin: 0;
+      padding: 24px;
+      background: #fff;
+      color: #111;
     }
-    h1, h2 {
-      margin-top: 1.4em;
-      margin-bottom: 0.6em;
+
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
     }
-    a {
-      text-decoration: underline;
-    }
-    .back {
-      margin-bottom: 1.5em;
+
+    a{ text-decoration: underline; color: inherit; }
+
+    .back{
       display: inline-block;
+      margin-bottom: 14px;
+    }
+
+    h1{
+      margin: 10px 0 6px;
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+    }
+
+    h2{
+      margin: 22px 0 8px;
+      font-size: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    p{
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    .track{
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: var(--pad);
+      margin: 14px 0;
+      background: #fff;
+    }
+
+    .track h3{
+      margin: 0 0 6px;
+      font-size: 1.05rem;
+    }
+
+    .track .meta{
+      margin: 0 0 12px;
+      font-size: .92rem;
+      color: var(--muted);
+    }
+
+    iframe{
+      width: 100%;
+      border: 0;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .footer{
+      margin-top: 26px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      font-size: .92rem;
+      color: var(--muted);
+    }
+
+    .small-link{
+      font-size: .92rem;
+      color: var(--muted);
     }
   </style>
 </head>
 
 <body>
+  <div class="wrap">
 
-  <a class="back" href="../">← Back to Bible</a>
+    <a class="back" href="../">← Back to Bible</a>
 
-  <h1>Audio</h1>
-  <h2>New Creation Readings</h2>
+    <h1>Audio</h1>
+    <h2>New Creation Readings</h2>
 
-  <p>
-    Audio readings and musical reflections connected to the Fulfilled Bible
-    and the present reality of the New Creation.
-  </p>
+    <p>
+      Audio readings and musical reflections connected to the Fulfilled Bible
+      and the present reality of the New Creation.
+    </p>
 
-  <!-- Example Suno embed -->
-  <iframe
-    src="https://suno.com/embed/2196bb04-4f3a-464a-a95c-dd4c19d3331e"
-    width="100%"
-    height="160"
-    frameborder="0"
-    allow="autoplay"
-  ></iframe>
+    <!-- Track 1 (existing) -->
+    <section class="track">
+      <h3>New Creation Reading</h3>
+      <p class="meta">Suno embed</p>
+      <iframe
+        src="https://suno.com/embed/2196bb04-4f3a-464a-a95c-dd4c19d3331e"
+        height="160"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+      <p class="small-link">
+        <a href="https://suno.com/embed/2196bb04-4f3a-464a-a95c-dd4c19d3331e" target="_blank" rel="noopener">
+          Open on Suno →
+        </a>
+      </p>
+    </section>
 
+    <!-- Track 2 (new) -->
+    <section class="track">
+      <h3>Here in the Quiet</h3>
+      <p class="meta">By allsetsouthern</p>
+      <iframe
+        src="https://suno.com/embed/7193954e-e834-46df-9c6b-b77a48a10dc0"
+        height="120"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+      <p class="small-link">
+        <a href="https://suno.com/s/VPLqYX0e9fbaPyT7" target="_blank" rel="noopener">
+          Open on Suno →
+        </a>
+      </p>
+    </section>
+
+    <div class="footer">
+      Want more tracks added here? Keep sending the Suno share link and I’ll format them consistently.
+    </div>
+
+  </div>
 </body>
 </html>
