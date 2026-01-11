@@ -11,116 +11,191 @@
   </script>
 
   <meta charset="UTF-8" />
-  <title>FPBible — Media</title>
+  <title>FPBible — Audio & Video</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
+    :root{
+      --maxw: 900px;
+      --pad: 18px;
+      --radius: 14px;
+      --border: rgba(0,0,0,.12);
+      --muted: rgba(0,0,0,.72);
+      --bg: #fff;
+      --fg: #111;
+    }
+
     body{
-      font-family: system-ui, sans-serif;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       line-height: 1.6;
-      margin: 1.5em;
-      max-width: 900px;
-    }
-    h1,h2,h3{
-      margin-top: 1.4em;
-      margin-bottom: 0.4em;
-    }
-    nav{
-      margin: 1em 0;
-      font-size: 0.95em;
-    }
-    nav a{
-      margin-right: 0.6em;
-      text-decoration: underline;
-    }
-    p{ margin: 0.6em 0; }
-    hr{ margin: 2em 0; }
-
-    .media{
-      border: 1px solid rgba(0,0,0,.12);
-      border-radius: 14px;
-      padding: 18px;
-      margin: 18px 0;
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--fg);
     }
 
-    .meta{
-      font-size: 0.95em;
-      opacity: 0.85;
-      margin-bottom: 10px;
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
     }
 
-    video,
-    audio{
+    a{ text-decoration: underline; color: inherit; }
+
+    .back{
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+
+    h1{
+      margin: 10px 0 6px;
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+    }
+
+    h2{
+      margin: 26px 0 10px;
+      font-size: 1.3rem;
+      letter-spacing: -0.01em;
+    }
+
+    p{
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    hr{
+      border: 0;
+      border-top: 1px solid var(--border);
+      margin: 22px 0;
+    }
+
+    .track{
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: var(--pad);
+      margin: 16px 0;
+      background: #fff;
+    }
+
+    .track h3{
+      margin: 0 0 6px;
+      font-size: 1.05rem;
+    }
+
+    .track .meta{
+      margin: 0 0 12px;
+      font-size: .92rem;
+      color: var(--muted);
+    }
+
+    iframe{
       width: 100%;
-      margin-top: 8px;
+      border: 0;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .small-link{
+      margin-top: 10px;
+      font-size: .92rem;
+      color: var(--muted);
+    }
+
+    .footer{
+      margin-top: 30px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      font-size: .92rem;
+      color: var(--muted);
     }
   </style>
 </head>
 
 <body>
+  <div class="wrap">
 
-<a id="top"></a>
+    <a class="back" href="../">← Back to FPBible</a>
 
-<nav>
-  <a href="/Bible/index.html">FPBible Index</a> |
-  <a href="/Bible/Prophecy/index.html">Prophecy Hub</a> |
-  <a href="#top">Top</a>
-</nav>
+    <h1>Audio & Video</h1>
+    <p>
+      Interpretive audio and video studies connected to the Fulfilled Paraphrase Bible
+      and the present reality of the New Creation.
+    </p>
 
-<h1>Media</h1>
-<h2>Parousia · Presence · Fulfilled Prophecy</h2>
+    <hr>
 
-<p>
-Long-form video and audio studies supporting the Fulfilled Paraphrase Bible.
-These resources focus on first-century fulfilment, covenant transition,
-and life lived from Christ’s present reign — not future speculation.
-</p>
+    <h2>Audio · New Creation Proclamations</h2>
 
-<hr />
+    <!-- Track 1 -->
+    <section class="track">
+      <h3>New Creation Proclamation — Part I</h3>
+      <p class="meta">Musical proclamation · New Creation</p>
 
-<section class="media">
-  <h3>The Parousia — An 1878 Answer</h3>
-  <p class="meta">
-    Video study · Based on J. Stuart Russell · AD 70 fulfilment
-  </p>
+      <iframe
+        src="https://suno.com/embed/e638b0cd-4344-433c-b2e3-cbacfe626b90"
+        height="240"
+        loading="lazy"
+        allow="autoplay; encrypted-media; fullscreen"
+        allowfullscreen>
+      </iframe>
 
-  <video controls preload="metadata" playsinline>
-    <source src="https://drive.google.com/file/d/1h03tXNEq1kgSuzZe0YwcVkTmv_mdnRys/view?usp=drivesdk" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+      <p class="small-link">
+        <a href="https://suno.com/song/e638b0cd-4344-433c-b2e3-cbacfe626b90" target="_blank" rel="noopener">
+          Open on Suno →
+        </a>
+      </p>
+    </section>
 
-  <p class="meta">
-    Examines New Testament time statements, prophetic idiom, and apostolic
-    expectation, showing why the Parousia belongs to the first-century
-    covenant judgement on Jerusalem.
-  </p>
-</section>
+    <!-- Track 2 -->
+    <section class="track">
+      <h3>New Creation Proclamation — Part II</h3>
+      <p class="meta">Presence · Rest · Finished Work</p>
 
-<hr />
+      <iframe
+        src="https://suno.com/embed/2196bb04-4f3a-464a-a95c-dd4c19d3331e"
+        height="240"
+        loading="lazy"
+        allow="autoplay; encrypted-media; fullscreen"
+        allowfullscreen>
+      </iframe>
 
-<section class="media">
-  <h3>Preterism — The Second Coming Already Happened</h3>
-  <p class="meta">
-    Audio study · Fulfilled eschatology · Covenant horizon
-  </p>
+      <p class="small-link">
+        <a href="https://suno.com/song/2196bb04-4f3a-464a-a95c-dd4c19d3331e" target="_blank" rel="noopener">
+          Open on Suno →
+        </a>
+      </p>
+    </section>
 
-  <audio controls preload="metadata">
-    <source src="/Bible/Audio/Preterism_The_Second_Coming_Already_Happened (1).mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+    <hr>
 
-  <p class="meta">
-    An overview of fulfilled prophecy addressing common objections and
-    clarifying how “coming”, “day”, and “end” language functions within
-    Scripture’s first-century covenant context.
-  </p>
-</section>
+    <h2>Video · Parousia Study</h2>
 
-<hr />
+    <section class="track" id="parousia-video">
+      <h3>The Parousia — An 1878 Answer</h3>
+      <p class="meta">
+        Video study · J. Stuart Russell · First-century fulfilment (AD 70)
+      </p>
 
-<p class="meta">
-FPBible — Media resources are interpretive studies, not Scripture.
-</p>
+      <iframe
+        src="https://player.vimeo.com/video/1153319588?h=8cd7d049f1&title=0&byline=0&portrait=0"
+        height="360"
+        loading="lazy"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe>
 
+      <p class="small-link">
+        <a href="https://vimeo.com/1153319588" target="_blank" rel="noopener">
+          Open on Vimeo →
+        </a>
+      </p>
+    </section>
+
+    <div class="footer">
+      FPBible — Audio & Video content supports study and reflection.  
+      Scripture text remains primary.
+    </div>
+
+  </div>
 </body>
 </html>
