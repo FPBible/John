@@ -21,193 +21,191 @@
       --pad: 18px;
       --radius: 14px;
 
-      --bg: #ffffff;
-      --ink: #111111;
-      --muted: #555555;
+      --bg:#ffffff;
+      --ink:#111111;
+      --muted:#555555;
 
-      --card: #f6f7f9;
-      --border: #e6e8ee;
+      --card:#f6f7f9;
+      --border:#e6e8ee;
 
-      --link: #0b57d0;
-      --linkHover: #063a8c;
+      --link:#0b57d0;
+      --linkHover:#063a8c;
     }
 
     *{ box-sizing:border-box; }
+
     body{
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--ink);
-      line-height: 1.55;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.55;
     }
 
-    a{ color: var(--link); text-decoration: none; }
-    a:hover{ color: var(--linkHover); text-decoration: underline; }
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ color:var(--linkHover); text-decoration:underline; }
 
     header{
-      border-bottom: 1px solid var(--border);
-      background: #fff;
+      border-bottom:1px solid var(--border);
+      background:#fff;
     }
 
     .wrap{
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: var(--pad);
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:var(--pad);
     }
 
     h1{
-      margin: 0 0 6px 0;
-      font-size: 28px;
-      letter-spacing: -0.2px;
+      margin:0 0 6px 0;
+      font-size:28px;
+      letter-spacing:-0.2px;
     }
+
     .sub{
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
     }
 
     .back{
       display:inline-block;
-      margin: 0 0 12px 0;
-      font-size: 14px;
+      margin-bottom:12px;
+      font-size:14px;
     }
 
-    main{ padding-bottom: 24px; }
+    main{ padding-bottom:24px; }
 
-    .section{
-      margin-top: 18px;
+    section.track{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:16px;
+      margin:18px 0;
     }
 
-    .card{
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 16px;
-      margin: 14px 0;
+    section.track h3{
+      margin:0 0 6px 0;
+      font-size:18px;
     }
 
-    .card h2{
-      margin: 0 0 8px 0;
-      font-size: 18px;
-    }
-    .card p{
-      margin: 0 0 10px 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .embed{
-      margin-top: 12px;
+    .meta{
+      margin:0 0 10px 0;
+      font-size:14px;
+      color:var(--muted);
     }
 
     iframe{
-      width: 100%;
-      max-width: 760px;
-      height: 240px;
-      border: 0;
-      border-radius: 10px;
+      width:100%;
+      max-width:760px;
+      border:0;
+      border-radius:10px;
       display:block;
     }
 
-    .small{
-      font-size: 13px;
-      color: var(--muted);
-      margin-top: 10px;
+    audio{
+      width:100%;
+      margin-top:8px;
+    }
+
+    .small-link{
+      margin-top:10px;
+      font-size:13px;
     }
 
     footer{
-      border-top: 1px solid var(--border);
-      padding: 18px 0 28px 0;
-      color: var(--muted);
-      font-size: 13px;
+      border-top:1px solid var(--border);
+      padding:18px 0 28px 0;
+      font-size:13px;
+      color:var(--muted);
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="wrap">
-      <a class="back" href="../index.html">← Return to FPBible</a>
-      <h1>Audio & Video</h1>
-      <p class="sub">Resources and tracks for FPBible.</p>
-    </div>
-  </header>
+<header>
+  <div class="wrap">
+    <a class="back" href="../index.html">← Return to FPBible</a>
+    <h1>Audio & Video</h1>
+    <p class="sub">FPBible audio teachings and video studies.</p>
+  </div>
+</header>
 
-  <main class="wrap">
+<main class="wrap">
 
-    <!-- NEW CREATION TRACKS (Suno) -->
-    <section class="section">
-      <div class="card">
-        <h2>New Creation Track #1</h2>
-        <p>Immersive presence track.</p>
+  <!-- SUNO TRACKS -->
+  <section class="track">
+    <h3>New Creation Track #1</h3>
+    <p class="meta">Immersive presence track</p>
 
-        <div class="embed">
-          <iframe
-            src="https://suno.com/embed/c5c154f8-1ca7-44e0-905f-e960a3d66ff2"
-            allow="autoplay; encrypted-media; fullscreen"
-            allowfullscreen
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          >
-            <a href="https://suno.com/song/c5c154f8-1ca7-44e0-905f-e960a3d66ff2">Listen on Suno</a>
-          </iframe>
-        </div>
-      </div>
+    <iframe
+      src="https://suno.com/embed/c5c154f8-1ca7-44e0-905f-e960a3d66ff2"
+      height="240"
+      allow="autoplay; encrypted-media; fullscreen"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+      <a href="https://suno.com/song/c5c154f8-1ca7-44e0-905f-e960a3d66ff2">Listen on Suno</a>
+    </iframe>
+  </section>
 
-      <div class="card">
-        <h2>New Creation Track #2</h2>
-        <p>Immersive presence track.</p>
+  <section class="track">
+    <h3>New Creation Track #2</h3>
+    <p class="meta">Immersive presence track</p>
 
-        <div class="embed">
-          <iframe
-            src="https://suno.com/embed/59d4f4ef-723e-4a56-8e4c-0fcd04849cdf"
-            allow="autoplay; encrypted-media; fullscreen"
-            allowfullscreen
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          >
-            <a href="https://suno.com/song/59d4f4ef-723e-4a56-8e4c-0fcd04849cdf">Listen on Suno</a>
-          </iframe>
-        </div>
-      </div>
-    </section>
+    <iframe
+      src="https://suno.com/embed/59d4f4ef-723e-4a56-8e4c-0fcd04849cdf"
+      height="240"
+      allow="autoplay; encrypted-media; fullscreen"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+      <a href="https://suno.com/song/59d4f4ef-723e-4a56-8e4c-0fcd04849cdf">Listen on Suno</a>
+    </iframe>
+  </section>
 
-    <!-- LEGACY SECTIONS (kept so the page feels like the original) -->
-    <section class="section">
-      <div class="card">
-        <h2>All Prophecy Happened in AD 70 (Audio)</h2>
-        <p>
-          If you still want this on the page, paste your original audio player/embed here.
-          If not, delete this card.
-        </p>
-        <!-- Paste old audio player here (audio tag, iframe, etc.) -->
-        <!-- Example:
-        <audio controls preload="none" style="width:100%;">
-          <source src="your-audio-file.mp3" type="audio/mpeg">
-        </audio>
-        -->
-      </div>
+  <!-- PAROUSIA VIDEO -->
+  <section class="track" id="parousia-video">
+    <h3>The Parousia — An 1878 Answer</h3>
+    <p class="meta">Video study · J. Stuart Russell · First-century fulfillment (AD 70)</p>
 
-      <div class="card">
-        <h2>Parousia Study (Video)</h2>
-        <p>
-          If you still want this section, paste your original YouTube/Vimeo embed here.
-          If not, delete this card.
-        </p>
-        <!-- Paste old video embed here -->
-      </div>
-    </section>
+    <iframe
+      src="https://player.vimeo.com/video/1153319588?h=8cd7d049f1&title=0&byline=0&portrait=0"
+      height="360"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen>
+    </iframe>
 
-    <p class="small">
-      Tip: if something looks “off,” it’s almost always an embed width/height issue — this page is locked to the same light look as the rest of FPBible.
+    <p class="small-link">
+      <a href="https://vimeo.com/1153319588" target="_blank" rel="noopener">
+        Open on Vimeo →
+      </a>
     </p>
+  </section>
 
-  </main>
+  <!-- AD70 AUDIO -->
+  <section class="track">
+    <h3>All Prophecy Happened in AD 70</h3>
+    <p class="meta">Audio teaching · Covenant fulfilment · First-century horizon</p>
 
-  <footer>
-    <div class="wrap">
-      <a href="../index.html">Return to FPBible Home</a>
-    </div>
-  </footer>
+    <audio controls preload="metadata">
+      <source src="All_Prophecy_Happened_in_AD_70.m4a" type="audio/mp4">
+      Your browser does not support the audio element.
+    </audio>
+
+    <p class="small-link">
+      <a href="All_Prophecy_Happened_in_AD_70.m4a" target="_blank" rel="noopener">
+        Download audio →
+      </a>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="../index.html">Return to FPBible Home</a>
+  </div>
+</footer>
 </body>
 </html>
