@@ -1,17 +1,9 @@
-<!--
-File: /Bible/NewCreation/manifesto.html
-FPBible — The New Creation Manifesto
-Updated to match /Bible/index.html styling + guiding links (top sticky nav + bottom nav),
-light theme, consistent typography, and “Start Here” guidance.
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>FPBible — The New Creation Manifesto</title>
+  <title>New Creation Manifesto — FPBible</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="FPBible’s foundational manifesto: Christ present, prophecy fulfilled, New Creation now." />
 
   <style>
     :root{
@@ -24,6 +16,7 @@ light theme, consistent typography, and “Start Here” guidance.
       --soft2: rgba(0,0,0,0.04);
       --radius: 14px;
     }
+
     body{
       font-family: system-ui, sans-serif;
       line-height: 1.65;
@@ -31,14 +24,25 @@ light theme, consistent typography, and “Start Here” guidance.
       color: #111;
       background: #fff;
     }
+
     .wrap{
       max-width: var(--maxw);
       margin: 0 auto;
       padding: 18px var(--pad) 42px;
     }
 
-    h1,h2,h3{ margin-top: 1.6em; margin-bottom: 0.45em; line-height: 1.2; }
-    h1{ margin-top: 0.9em; font-size: 2.1rem; letter-spacing: -0.2px; }
+    h1,h2,h3{
+      margin-top: 1.6em;
+      margin-bottom: 0.45em;
+      line-height: 1.2;
+    }
+
+    h1{
+      margin-top: 0.9em;
+      font-size: 2.1rem;
+      letter-spacing: -0.2px;
+    }
+
     h2{ font-size: 1.35rem; }
     h3{ font-size: 1.08rem; }
 
@@ -49,11 +53,18 @@ light theme, consistent typography, and “Start Here” guidance.
     a{ color: inherit; text-decoration: underline; }
     a:hover{ opacity: 0.85; }
 
-    hr{ margin: 2.0em 0; border: 0; border-top: 1px solid var(--line); }
+    hr{
+      margin: 2.0em 0;
+      border: 0;
+      border-top: 1px solid var(--line);
+    }
 
-    .note{ font-size: 0.96em; color: var(--muted); }
+    .note{
+      font-size: 0.96em;
+      color: var(--muted);
+    }
 
-    /* Top nav (match index.html) */
+    /* Sticky top nav (identical pattern to index.html) */
     .topnav{
       position: sticky;
       top: 0;
@@ -62,6 +73,7 @@ light theme, consistent typography, and “Start Here” guidance.
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--line);
     }
+
     .topnav .bar{
       max-width: var(--maxw);
       margin: 0 auto;
@@ -71,56 +83,28 @@ light theme, consistent typography, and “Start Here” guidance.
       gap: 10px 12px;
       align-items: center;
     }
+
     .topnav a{
       text-decoration: underline;
       font-size: 0.95em;
       color: #111;
       white-space: nowrap;
     }
+
     .topnav .sep{ opacity: 0.45; }
 
-    /* Pills / badges */
-    .pill{
-      display: inline-block;
-      border: 1px solid var(--line2);
-      border-radius: 999px;
-      padding: 2px 10px;
-      font-size: 0.9em;
-      margin: 0 6px 6px 0;
-      background: var(--soft2);
-    }
-
-    /* Boxes (match index card feel) */
-    .box{
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 14px 16px;
-      background: #fff;
-    }
-    .softbox{
+    /* Manifesto box */
+    .manifesto{
       border: 1px solid var(--line);
       border-radius: var(--radius);
       padding: 14px 16px;
       background: var(--soft2);
     }
-
-    /* “Start here” quick box */
-    .quick{
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 12px 14px;
-      background: var(--soft2);
-    }
-    .quick ul{ margin: 0.6em 0 0.2em 1.15em; }
-    .quick li{ margin: 0.35em 0; }
 
     .lead{ font-size: 1.06em; }
-
-    /* Section anchors spacing under sticky nav */
-    section{ scroll-margin-top: 72px; }
-
-    /* Closing emphasis */
     .closing{ margin-top: 1.1em; font-size: 1.05em; }
+
+    section{ scroll-margin-top: 70px; }
   </style>
 </head>
 
@@ -131,10 +115,9 @@ light theme, consistent typography, and “Start Here” guidance.
 <div class="topnav">
   <div class="bar">
     <a href="/Bible/index.html">FPBible Index</a><span class="sep">|</span>
-    <a href="/Bible/Prophecy/index.html">Prophecy Hub</a><span class="sep">|</span>
-    <a href="/Bible/Prophecy/new-creation.html">New Creation (Hub)</a><span class="sep">|</span>
     <a href="#start">Start</a><span class="sep">|</span>
     <a href="#manifesto">Manifesto</a><span class="sep">|</span>
+    <a href="/Bible/Prophecy/index.html">Prophecy Hub</a><span class="sep">|</span>
     <a href="#top">Top</a>
   </div>
 </div>
@@ -142,141 +125,97 @@ light theme, consistent typography, and “Start Here” guidance.
 <div class="wrap">
 
   <h1>The New Creation Manifesto</h1>
-  <p class="note">
-    FPBible’s foundation: Christ present, prophecy fulfilled, and New Creation life lived now — not postponed.
-  </p>
 
-  <div>
-    <span class="pill">Framework</span>
-    <span class="pill">New Creation</span>
-    <span class="pill">Presence</span>
-    <span class="pill">Zero Futurism</span>
-  </div>
+  <p class="note">
+    A foundational orientation page for FPBible.  
+    This page explains the *lens* — not individual verses.
+  </p>
 
   <hr />
 
   <section id="start">
-    <h2>Start Here</h2>
+    <h2>How to Use This Page</h2>
 
-    <div class="quick">
-      <ul>
-        <li><strong>Read this manifesto once</strong> to understand the lens.</li>
-        <li><strong>Then read a book</strong> chapter-by-chapter from the book index.</li>
-        <li><strong>When you hit prophecy language</strong> (coming / wrath / fire / resurrection / heaven &amp; earth), use the Prophecy Hub.</li>
-      </ul>
+    <ul>
+      <li>Read this once to understand the framework.</li>
+      <li>Then read Scripture chapter-by-chapter.</li>
+      <li>Use the Prophecy Hub when you encounter prophetic language.</li>
+    </ul>
 
-      <p class="note">
-        Locked project standard (chapter pages):
-        <a href="/Bible/standard.html">FPBible Chapter Standard</a>
-      </p>
-    </div>
+    <p class="note">
+      Chapter pages follow a stricter format:  
+      <a href="/Bible/standard.html">FPBible Chapter Standard</a>
+    </p>
   </section>
 
   <hr />
 
-  <section id="manifesto" class="softbox">
-    <h2>Manifesto</h2>
+  <section id="manifesto" class="manifesto">
 
     <p class="lead">
-      Fulfillment is not a disenchanting life. It is a settled life.
-      Christian faith is not defined by waiting, countdowns, or speculation.
-      Its center is <strong>presence</strong>.
+      Christian faith is often presented as something unfinished — a life of waiting, watching,
+      and hoping for what has not yet arrived. FPBible begins from a different conviction:
+      that the heart of the gospel is not delay, but <strong>presence</strong>.
     </p>
 
-    <div class="box">
-      <h3>1. Fulfillment, Not Expectation</h3>
-      <p>
-        The gospel does not leave us suspended. What Scripture promised has come to maturity.
-        Fulfillment does not erase meaning; it establishes it. We read from the far side of completion,
-        living from what is finished rather than postponing life into a future horizon.
-      </p>
-    </div>
+    <p>
+      The New Testament proclaims not merely forgiveness, but nearness.
+      Not just promise, but fulfillment. Not escape from the world,
+      but renewal within it.
+    </p>
 
-    <p></p>
+    <p>
+      The New Creation is not a distant future reality.
+      It is the world as it stands after Christ has completed His work —
+      reconciled, opened, and alive with God’s presence.
+    </p>
 
-    <div class="box">
-      <h3>2. The Presence of Christ</h3>
-      <p>
-        Christian life is not built on distance. Presence replaces access. The veil is gone.
-        Christ is not treated as absent from His kingdom. Faith becomes awareness, trust,
-        and embodied life with God in ordinary moments — work, rest, relationships, and love.
-      </p>
-    </div>
+    <p>
+      This means Christian life is not lived in anxiety about what might happen next,
+      but in confidence about what <strong>has already been made true</strong>.
+    </p>
 
-    <p></p>
+    <h3>Presence, Not Distance</h3>
+    <p>
+      God is not approached through sacred places, rituals, or religious systems.
+      He is encountered in ordinary life — in work, rest, relationships, and love.
+    </p>
 
-    <div class="box">
-      <h3>3. Life in the New Heavens and New Earth</h3>
-      <p>
-        New Creation language is covenant language: a changed world of relationship, worship, and belonging.
-        We are not trying to “get in.” We live as those already brought near. This is not optimism.
-        It is the New Covenant condition.
-      </p>
-    </div>
+    <p>
+      Faith is not about gaining access.  
+      <strong>Access has already been given.</strong>
+    </p>
 
-    <p></p>
+    <h3>Fulfillment That Changes Everything</h3>
+    <p>
+      Fulfillment does not mean loss. It means maturity.
+      Promises fulfilled do not disappear — they become the foundation of life.
+    </p>
 
-    <div class="box">
-      <h3>4. The New Jerusalem</h3>
-      <p>
-        The New Jerusalem is living community — a people made holy in Christ, open-gated, outward-flowing,
-        carrying healing and reconciliation into the nations. It is not a distant fantasy but a present identity.
-      </p>
-    </div>
+    <p>
+      The New Creation is not about waiting for light to arrive.
+      It is about learning how to live in the daylight.
+    </p>
 
-    <p></p>
-
-    <div class="box">
-      <h3>5. Resurrection and Life</h3>
-      <p>
-        The gospel announces victory over death as separation from God. Eternal life is not only future survival.
-        It is present participation. Those who belong to Christ do not live in suspense — they live in rest,
-        confidence, and fellowship with God.
-      </p>
-    </div>
-
-    <p></p>
-
-    <div class="box">
-      <h3>6. God All in All</h3>
-      <p>
-        Faith is no longer about access. It is about awareness. Worship is not confined to sacred geography.
-        Holiness is not managed by fear. God’s presence fills ordinary life — and love becomes the visible shape of it.
-      </p>
-    </div>
+    <h3>A Life That Is Already Open</h3>
+    <p>
+      Christian life is not suspended between two ages.
+      It is rooted in the present reality of reconciliation, belonging,
+      and restored relationship with God.
+    </p>
 
     <p class="closing">
-      The New Creation is not an idea to defend. It is a reality to inhabit. <br />
-      <strong>We do not wait for Christ. We walk with Him.</strong>
+      <strong>Christ is present.  
+      The New Creation is now.  
+      This is how we read Scripture — and how we live.</strong>
     </p>
-  </section>
 
-  <hr />
-
-  <section id="links">
-    <h2>Guiding Links</h2>
-
-    <div class="softbox">
-      <ul>
-        <li><a href="/Bible/index.html">Return to FPBible Index</a></li>
-        <li><a href="/Bible/Prophecy/index.html">Prophecy Hub Index</a></li>
-        <li><a href="/Bible/Prophecy/new-creation.html">New Creation (Prophecy Hub)</a></li>
-        <li><a href="/Bible/Prophecy/parousia.html">Parousia — Presence, Not Delay</a></li>
-        <li><a href="/Bible/standard.html">FPBible Chapter Standard</a></li>
-      </ul>
-
-      <p class="note">
-        Rule of thumb: if something sounds “future,” it must be explained as first-century fulfillment or linked to the Hub.
-      </p>
-    </div>
   </section>
 
   <hr />
 
   <nav class="note">
     <a href="#top">Top</a> ·
-    <a href="#start">Start</a> ·
-    <a href="#manifesto">Manifesto</a> ·
     <a href="/Bible/index.html">FPBible Index</a> ·
     <a href="/Bible/Prophecy/index.html">Prophecy Hub</a>
   </nav>
