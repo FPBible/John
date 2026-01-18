@@ -2,230 +2,468 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Resurrection — From Death to Life (Fulfilled)</title>
+  <title>Resurrection — FPBible</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.65;margin:1.5em;max-width:900px}
-    h1,h2,h3{margin-top:1.4em;margin-bottom:.35em}
-    nav{margin:1em 0;font-size:.95em}
-    nav a{margin-right:.75em;text-decoration:underline}
-    p{margin:.6em 0}
-    ul{margin:.5em 0 .9em 1.2em}
-    li{margin:.35em 0}
-    .meta{font-size:.95em;opacity:.85}
-    .callout{border-left:4px solid #999;padding:.75em 1em;margin:1em 0}
-    .ref{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:.95em}
-    hr{margin:2em 0}
-    .grid{display:grid;grid-template-columns:1fr;gap:1em}
-    @media (min-width: 820px){
-      .grid{grid-template-columns:1fr 1fr}
+    :root{
+      --maxw: 1020px;
+      --pad: 16px;
+      --line: rgba(0,0,0,0.12);
+      --line2: rgba(0,0,0,0.18);
+      --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.06);
+      --soft2: rgba(0,0,0,0.04);
+      --radius: 14px;
+    }
+    body{
+      font-family: system-ui, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      color: #111;
+      background: #fff;
+    }
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 18px var(--pad) 42px;
+    }
+
+    h1,h2,h3{ margin-top: 1.6em; margin-bottom: 0.45em; line-height: 1.2; }
+    h1{ margin-top: 0.9em; font-size: 2.05rem; letter-spacing: -0.2px; }
+    h2{ font-size: 1.35rem; }
+    h3{ font-size: 1.08rem; }
+
+    p{ margin: 0.75em 0; }
+    ul{ margin: 0.6em 0 0.9em 1.15em; padding: 0; }
+    li{ margin: 0.42em 0; }
+
+    a{ color: inherit; text-decoration: underline; }
+    a:hover{ opacity: 0.85; }
+
+    hr{ margin: 2.0em 0; border: 0; border-top: 1px solid var(--line); }
+
+    .note{ font-size: 0.96em; color: var(--muted); }
+    .lead{ font-size: 1.06em; }
+
+    /* Top nav */
+    .topnav{
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .topnav .bar{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 10px var(--pad);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 12px;
+      align-items: center;
+    }
+    .topnav a{
+      text-decoration: underline;
+      font-size: 0.95em;
+      color: #111;
+      white-space: nowrap;
+    }
+    .topnav .sep{ opacity: 0.45; }
+
+    /* Pills */
+    .pill{
+      display: inline-block;
+      border: 1px solid var(--line2);
+      border-radius: 999px;
+      padding: 2px 10px;
+      font-size: 0.9em;
+      margin: 0 6px 6px 0;
+      background: var(--soft2);
+    }
+
+    /* Cards / grids */
+    .grid{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 12px;
+    }
+    @media(min-width: 900px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+    .card{
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      background: #fff;
+    }
+    .card h3{ margin-top: 0.2em; }
+    .card p{ margin: 0.35em 0 0.7em; }
+
+    /* Sections */
+    .section-head{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 10px;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-top: 0.2em;
+    }
+    .section-head .hint{
+      font-size: 0.95em;
+      color: var(--muted);
+    }
+
+    /* Callouts */
+    .callout{
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      background: var(--soft2);
+    }
+
+    /* Scripture links */
+    .refs a{ white-space: nowrap; }
+    .refline{ margin: 0.35em 0; }
+    code{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+                   "Liberation Mono","Courier New", monospace;
+      font-size: 0.96em;
     }
   </style>
 </head>
 
 <body>
+
+<a id="top"></a>
+
+<div class="topnav">
+  <div class="bar">
+    <a href="/Bible/index.html">Index</a><span class="sep">|</span>
+    <a href="/Bible/Prophecy/index.html">Prophecy Hub</a><span class="sep">|</span>
+    <a href="/Bible/NewCreation/index.html">New Creation</a><span class="sep">|</span>
+    <a href="/Bible/Life/index.html">Life</a><span class="sep">|</span>
+    <a href="#start">Start</a><span class="sep">|</span>
+    <a href="#thesis">Thesis</a><span class="sep">|</span>
+    <a href="#texts">Key Texts</a><span class="sep">|</span>
+    <a href="#logic">Logic</a><span class="sep">|</span>
+    <a href="#now">Now</a><span class="sep">|</span>
+    <a href="#top">Top</a>
+  </div>
+</div>
+
+<div class="wrap">
+
   <h1>Resurrection</h1>
-  <p class="meta">
-    A fulfilled (AD 70) evaluation: what “resurrection” means in Scripture, how it was promised, and what it means now in the New Creation.
+  <h2>From Covenant Death to Life in Christ · Fulfilled Horizon</h2>
+
+  <p class="lead">
+    Resurrection in Scripture is not treated as a vague religious hope.
+    It is the covenant victory of God in Christ: death (condemnation/exile under the Law) is ended,
+    and life (access/union) is established as present reality.
   </p>
 
-  <nav aria-label="Site">
-    <a href="/Bible/index.html">Bible Index</a>
-    <a href="/Bible/Prophecy/index.html">Prophecy Hub</a>
-    <a href="/Bible/NewCreation/index.html">New Creation</a>
-    <a href="/Bible/Life/index.html">Life</a>
-    <a href="/Bible/Glossary/index.html">Glossary</a>
-    <a href="/Bible/Audio/index.html">Audio</a>
+  <p class="note">
+    Rule: if “resurrection” is pushed into an undefined future, it quietly rebuilds the distance Christ ended.
+    FPBible ties resurrection to the Bible’s stated horizon: the end of the age and the covenant transition.
+  </p>
+
+  <hr />
+
+  <section id="start">
+    <div class="section-head">
+      <h2>Start Here</h2>
+      <div class="hint">Read these first — they form the spine.</div>
+    </div>
+
+    <div class="callout refs">
+      <p class="refline"><span class="pill">Core</span>
+        <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.1Co15" target="_blank" rel="noopener">1 Corinthians 15</a> ·
+        <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Ro5" target="_blank" rel="noopener">Romans 5</a> ·
+        <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Ro6" target="_blank" rel="noopener">Romans 6</a> ·
+        <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Ro8" target="_blank" rel="noopener">Romans 8</a>
+      </p>
+      <p class="refline"><span class="pill">Present life</span>
+        <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Eph2" target="_blank" rel="noopener">Ephesians 2</a> ·
+        <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Col2" target="_blank" rel="noopener">Colossians 2</a> ·
+        <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Col3" target="_blank" rel="noopener">Colossians 3</a>
+      </p>
+      <p class="refline"><span class="pill">Covenant shift</span>
+        <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Heb8" target="_blank" rel="noopener">Hebrews 8</a> ·
+        <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Heb9" target="_blank" rel="noopener">Hebrews 9</a> ·
+        <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Heb10" target="_blank" rel="noopener">Hebrews 10</a> ·
+        <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Heb12" target="_blank" rel="noopener">Hebrews 12</a>
+      </p>
+      <p class="refline"><span class="pill">Prophets</span>
+        <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Eze37" target="_blank" rel="noopener">Ezekiel 37</a> ·
+        <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Isa25" target="_blank" rel="noopener">Isaiah 25</a> ·
+        <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Isa26" target="_blank" rel="noopener">Isaiah 26</a> ·
+        <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Da12" target="_blank" rel="noopener">Daniel 12</a>
+      </p>
+    </div>
+
+    <p class="note">
+      Tip: when you see “death,” “life,” “awake,” “sleep,” “end,” “inherit,” “Kingdom,” read the paragraph and the covenant context before assuming biology.
+    </p>
+  </section>
+
+  <hr />
+
+  <section id="thesis">
+    <div class="section-head">
+      <h2>Thesis in One Paragraph</h2>
+      <div class="hint">What we mean by “resurrection” in this project.</div>
+    </div>
+
+    <div class="callout">
+      <p>
+        In Scripture, <strong>death</strong> is not only physical dying; it is also covenant separation and condemnation under sin empowered by the Law
+        (<a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.1Co15.56" target="_blank" rel="noopener">1 Cor 15:56</a>,
+         <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.2Co3.7" target="_blank" rel="noopener">2 Cor 3:7</a>,
+         <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Eph2.1" target="_blank" rel="noopener">Eph 2:1</a>).
+        <strong>Resurrection</strong> is God raising His people from that death-order into Christ’s life-order—access, union, and Spirit-life as present reality
+        (<a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Eph2.5-6" target="_blank" rel="noopener">Eph 2:5–6</a>,
+         <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Col2.12-13" target="_blank" rel="noopener">Col 2:12–13</a>,
+         <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Col3.1" target="_blank" rel="noopener">Col 3:1</a>).
+        Paul ties the defeat of “death” to the end of the age horizon and the removal of the Law’s condemning power
+        (<a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.1Co15.24-26" target="_blank" rel="noopener">1 Cor 15:24–26</a>,
+         <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Heb9.26" target="_blank" rel="noopener">Heb 9:26</a>,
+         <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Heb8.13" target="_blank" rel="noopener">Heb 8:13</a>).
+      </p>
+    </div>
+  </section>
+
+  <hr />
+
+  <section id="texts">
+    <div class="section-head">
+      <h2>Key Texts (What They Actually Say)</h2>
+      <div class="hint">Concise, but serious — follow the argument inside each text.</div>
+    </div>
+
+    <div class="grid">
+
+      <div class="card refs">
+        <span class="pill">1 Corinthians 15</span>
+        <h3>Death defeated where its power lives</h3>
+        <p>
+          Paul defines death’s sting and power: <strong>sin</strong> and <strong>Law</strong>.
+          Resurrection is not framed as “flesh upgrading,” but as victory over condemnation and corruption.
+        </p>
+        <ul>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.1Co15.20-28" target="_blank" rel="noopener">1 Cor 15:20–28</a> (order → “then comes the end”)</li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.1Co15.42-50" target="_blank" rel="noopener">1 Cor 15:42–50</a> (natural/spiritual; flesh and blood)</li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.1Co15.51-57" target="_blank" rel="noopener">1 Cor 15:51–57</a> (“power of sin is the law”)</li>
+        </ul>
+      </div>
+
+      <div class="card refs">
+        <span class="pill">Ephesians &amp; Colossians</span>
+        <h3>Raised with Christ — present tense reality</h3>
+        <p>
+          These letters don’t treat resurrection as only future. They ground ethics in a present “raised” identity.
+        </p>
+        <ul>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Eph2.1-6" target="_blank" rel="noopener">Eph 2:1–6</a> (dead → alive → raised)</li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Col2.12-15" target="_blank" rel="noopener">Col 2:12–15</a> (raised; record of debt cancelled)</li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Col3.1-4" target="_blank" rel="noopener">Col 3:1–4</a> (if you were raised… set your mind)</li>
+        </ul>
+      </div>
+
+      <div class="card refs">
+        <span class="pill">Hebrews</span>
+        <h3>Covenant transition: access replaces shadow</h3>
+        <p>
+          Hebrews describes the old covenant as aging and vanishing, and the “consummation of the ages” as present to them.
+        </p>
+        <ul>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Heb8.13" target="_blank" rel="noopener">Heb 8:13</a> (near to vanishing)</li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Heb9.8-10" target="_blank" rel="noopener">Heb 9:8–10</a> (access not yet opened under the first)</li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Heb9.26-28" target="_blank" rel="noopener">Heb 9:26–28</a> (consummation of the ages)</li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Heb10.10-14" target="_blank" rel="noopener">Heb 10:10–14</a> (perfected by one offering)</li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Heb12.22-24" target="_blank" rel="noopener">Heb 12:22–24</a> (you have come to the heavenly Jerusalem)</li>
+        </ul>
+      </div>
+
+      <div class="card refs">
+        <span class="pill">Prophets</span>
+        <h3>Resurrection language as corporate restoration</h3>
+        <p>
+          The prophets regularly use “raise / live / awake” as covenant restoration imagery.
+        </p>
+        <ul>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Eze37.1-14" target="_blank" rel="noopener">Ezek 37:1–14</a> (bones → Israel restored)</li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Isa25.6-9" target="_blank" rel="noopener">Isa 25:6–9</a> (death swallowed up)</li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Isa26.19" target="_blank" rel="noopener">Isa 26:19</a> (your dead shall live)</li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Da12.1-3" target="_blank" rel="noopener">Dan 12:1–3</a> (trouble → deliverance → awakening)</li>
+        </ul>
+      </div>
+
+      <div class="card refs">
+        <span class="pill">Jesus’ Horizon</span>
+        <h3>“This generation” and the end of the age</h3>
+        <p>
+          Jesus anchors the crisis language (judgment, coming, end) inside that generation’s horizon.
+        </p>
+        <ul>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Mt24.34" target="_blank" rel="noopener">Matt 24:34</a> (this generation)</li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Lk21.32" target="_blank" rel="noopener">Luke 21:32</a> (this generation)</li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Mt16.27-28" target="_blank" rel="noopener">Matt 16:27–28</a> (some standing here…)</li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Mt23.36" target="_blank" rel="noopener">Matt 23:36</a> (all these things…this generation)</li>
+        </ul>
+      </div>
+
+      <div class="card refs">
+        <span class="pill">Revelation</span>
+        <h3>Death removed as New Creation reality</h3>
+        <p>
+          Revelation moves from covenant judgment to New Jerusalem life, with “death” removed as an order.
+        </p>
+        <ul>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Re20.6" target="_blank" rel="noopener">Rev 20:6</a> (first resurrection)</li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Re20.14" target="_blank" rel="noopener">Rev 20:14</a> (death and Hades removed)</li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Re21.3-5" target="_blank" rel="noopener">Rev 21:3–5</a> (death no more; all things new)</li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Re22.1-2" target="_blank" rel="noopener">Rev 22:1–2</a> (river and tree of life)</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <hr />
+
+  <section id="logic">
+    <div class="section-head">
+      <h2>Logic (No Hand-waving)</h2>
+      <div class="hint">If these links break, the doctrine drifts.</div>
+    </div>
+
+    <div class="callout refs">
+      <ul>
+        <li>
+          <strong>Death’s power is Law-based condemnation</strong>:
+          <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.1Co15.56" target="_blank" rel="noopener">1 Cor 15:56</a>,
+          <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.2Co3.7-11" target="_blank" rel="noopener">2 Cor 3:7–11</a>,
+          <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Ro7.9-11" target="_blank" rel="noopener">Rom 7:9–11</a>.
+        </li>
+        <li>
+          <strong>Christ ends condemnation and introduces Spirit-life now</strong>:
+          <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Ro8.1-4" target="_blank" rel="noopener">Rom 8:1–4</a>,
+          <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Eph2.5-6" target="_blank" rel="noopener">Eph 2:5–6</a>,
+          <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Col3.1-4" target="_blank" rel="noopener">Col 3:1–4</a>.
+        </li>
+        <li>
+          <strong>Resurrection belongs to the “end of the age” horizon</strong>:
+          <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.1Co15.24" target="_blank" rel="noopener">1 Cor 15:24</a>,
+          <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Heb9.26" target="_blank" rel="noopener">Heb 9:26</a>,
+          <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.1Co10.11" target="_blank" rel="noopener">1 Cor 10:11</a>,
+          <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Mt24.34" target="_blank" rel="noopener">Matt 24:34</a>.
+        </li>
+        <li>
+          <strong>Therefore</strong>: resurrection is not a perpetual “almost.”
+          It is the covenant victory that makes New Creation life normal.
+        </li>
+      </ul>
+      <p class="note">
+        This does not deny that people physically die. It denies that “resurrection” must be reduced to biology,
+        when Scripture defines the problem (death) and its power (law) in covenant terms.
+      </p>
+    </div>
+  </section>
+
+  <hr />
+
+  <section id="now">
+    <div class="section-head">
+      <h2>What This Means Now</h2>
+      <div class="hint">Resurrection is not trivia; it’s the foundation for living.</div>
+    </div>
+
+    <div class="grid">
+      <div class="card refs">
+        <span class="pill">Freedom</span>
+        <h3>No condemnation</h3>
+        <p>Resurrection life is lived without law-fear as the operating system.</p>
+        <ul>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Ro8.1" target="_blank" rel="noopener">Rom 8:1</a></li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Ro6.11" target="_blank" rel="noopener">Rom 6:11</a></li>
+        </ul>
+      </div>
+
+      <div class="card refs">
+        <span class="pill">Identity</span>
+        <h3>New humanity</h3>
+        <p>You live from a raised identity, not to earn one.</p>
+        <ul>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.2Co5.17" target="_blank" rel="noopener">2 Cor 5:17</a></li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Col3.1-3" target="_blank" rel="noopener">Col 3:1–3</a></li>
+        </ul>
+      </div>
+
+      <div class="card refs">
+        <span class="pill">Holiness</span>
+        <h3>Life expressed</h3>
+        <p>Holiness is life expressed, not fear-managed performance.</p>
+        <ul>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Ro6.4" target="_blank" rel="noopener">Rom 6:4</a></li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Col3.5-10" target="_blank" rel="noopener">Col 3:5–10</a></li>
+        </ul>
+      </div>
+
+      <div class="card refs">
+        <span class="pill">Mission</span>
+        <h3>Reconciliation</h3>
+        <p>Resurrection life becomes reconciliation in the world.</p>
+        <ul>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.2Co5.18-20" target="_blank" rel="noopener">2 Cor 5:18–20</a></li>
+          <li><a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.Ro5.10-11" target="_blank" rel="noopener">Rom 5:10–11</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="note">
+      Want the short version? Resurrection means: you are not waiting to become alive.
+      You are called to live awake, because life has already been given in Christ.
+    </p>
+  </section>
+
+  <hr />
+
+  <section id="links">
+    <div class="section-head">
+      <h2>Related Links</h2>
+      <div class="hint">Use these when cross-linking other pages.</div>
+    </div>
+
+    <div class="callout">
+      <ul>
+        <li><a href="/Bible/Prophecy/death.html">Death (Prophecy Hub framework)</a></li>
+        <li><a href="/Bible/Prophecy/life.html">Life (Prophecy Hub framework)</a></li>
+        <li><a href="/Bible/Prophecy/new-creation.html">New Creation (Prophecy Hub)</a></li>
+        <li><a href="/Bible/Prophecy/parousia.html">Parousia (Presence, not delay)</a></li>
+        <li><a href="/Bible/Life/index.html">Life (practical living)</a></li>
+      </ul>
+      <p class="note">
+        If you arrive here through “resurrection” debates, don’t start with definitions.
+        Start with <a href="https://ref.ly/logosres/LLS:1.0.8?ref=Bible.1Co15" target="_blank" rel="noopener">1 Corinthians 15</a>
+        and follow Paul’s own logic: death’s power, then victory.
+      </p>
+    </div>
+  </section>
+
+  <hr />
+
+  <nav class="note">
+    <a href="#top">Top</a> ·
+    <a href="#start">Start</a> ·
+    <a href="#thesis">Thesis</a> ·
+    <a href="#texts">Key Texts</a> ·
+    <a href="#logic">Logic</a> ·
+    <a href="#now">Now</a>
   </nav>
 
-  <div class="callout">
-    <p><strong>Thesis:</strong> In the Bible, resurrection is God’s covenantal victory over “death” (condemnation/exile under the Law), climaxing at the end of the age in the first-century transition, producing the New Creation life now.</p>
-    <p class="ref"><strong>Key texts:</strong> 1 Cor 15; Rom 5–8; 2 Cor 3–5; Eph 2; Col 2–3; Heb 8–10, 12; Dan 12; Ezek 37; Isa 25–26; Rev 20–22; Matt 24; Luke 21.</p>
-  </div>
-
-  <h2>1) Define the Bible’s “Death” and “Life”</h2>
-  <p>
-    Scripture regularly uses “death” and “life” as covenant realities, not merely biological states.
-  </p>
-  <div class="grid">
-    <div>
-      <h3>Death as condemnation/exile</h3>
-      <ul>
-        <li>“The ministry of death, engraved on stones” (2 Cor 3:7)</li>
-        <li>“The sting of death is sin, and the power of sin is the law” (1 Cor 15:56)</li>
-        <li>“You were dead in…sins” (Eph 2:1–5)</li>
-        <li>“The mind of the flesh is death” (Rom 8:6)</li>
-        <li>“The wages of sin is death” (Rom 6:23)</li>
-      </ul>
-    </div>
-    <div>
-      <h3>Life as restored access/union</h3>
-      <ul>
-        <li>“Made us alive together with Christ…raised us up” (Eph 2:5–6)</li>
-        <li>“If anyone is in Christ, he is a new creation” (2 Cor 5:17)</li>
-        <li>“You have died, and your life is hidden with Christ” (Col 3:3)</li>
-        <li>“Passed out of death into life” (John 5:24)</li>
-        <li>“He who has the Son has the life” (1 John 5:11–12)</li>
-      </ul>
-    </div>
-  </div>
-
-  <hr />
-
-  <h2>2) The Old Testament Backdrop: Corporate “Raising” Imagery</h2>
-  <p>
-    The prophets often describe covenant restoration using resurrection language.
-  </p>
-  <ul>
-    <li><strong>Ezekiel 37</strong> — Israel’s restoration pictured as bones coming to life (Ezek 37:1–14)</li>
-    <li><strong>Isaiah 26</strong> — “Your dead shall live” in the context of deliverance and vindication (Isa 26:19)</li>
-    <li><strong>Isaiah 25</strong> — death “swallowed up” with covenant comfort for God’s people (Isa 25:6–9)</li>
-    <li><strong>Hosea 6</strong> — “After two days…on the third day he will raise us up” (Hos 6:1–2)</li>
-  </ul>
-
-  <div class="callout">
-    <p>
-      These passages are not presented as random biology lessons. They are covenant images:
-      death/exile → restoration/life; shame → vindication; separation → access.
-    </p>
-  </div>
-
-  <hr />
-
-  <h2>3) Daniel 12 and “the End”: Resurrection Tied to the Covenant Crisis</h2>
-  <p>
-    Daniel’s resurrection language is anchored to a specific time of national trouble and deliverance.
-  </p>
-  <ul>
-    <li>“There shall be a time of trouble…at that time your people shall be delivered” (Dan 12:1)</li>
-    <li>“Many of those who sleep…shall awake” (Dan 12:2)</li>
-    <li>End markers: “at the end of the days” / the finishing of Daniel’s vision (Dan 12:4, 9, 13)</li>
-  </ul>
-  <p>
-    In the New Testament, Jesus and the apostles place the climactic “end” within the first-century generation:
-  </p>
-  <ul>
-    <li>“This generation will not pass away until all these things are accomplished” (Matt 24:34; Luke 21:32)</li>
-    <li>“The end of the ages has come” (1 Cor 10:11)</li>
-    <li>“It is the last hour” (1 John 2:18)</li>
-    <li>“The consummation of the ages” (Heb 9:26)</li>
-  </ul>
-
-  <hr />
-
-  <h2>4) 1 Corinthians 15: What Resurrection Does (and What It Isn’t)</h2>
-  <p>
-    Paul’s chapter is the spine for resurrection doctrine. Read it in Paul’s own categories:
-    Adam/Christ, death/life, corruption/incorruption, earthly/heavenly.
-  </p>
-
-  <h3>A) Resurrection and the defeat of “death”</h3>
-  <ul>
-    <li>“As in Adam all die, so also in Christ all will be made alive” (1 Cor 15:22)</li>
-    <li>“The last enemy that will be abolished is death” (1 Cor 15:26)</li>
-    <li>“The sting of death is sin, and the power of sin is the law” (1 Cor 15:56)</li>
-  </ul>
-  <p>
-    Paul locates death’s authority in <em>sin empowered by the Law</em>. Resurrection therefore includes the removal of that condemning power.
-  </p>
-
-  <h3>B) “Flesh and blood” and the kind of body</h3>
-  <ul>
-    <li>“Flesh and blood can’t inherit the Kingdom of God” (1 Cor 15:50)</li>
-    <li>“It is sown a natural body; it is raised a spiritual body” (1 Cor 15:44)</li>
-    <li>“The first man is of the earth… the second man is of heaven” (1 Cor 15:47)</li>
-  </ul>
-  <p>
-    Paul contrasts two modes of humanity: Adamic (earthly/condemned) and Christic (heavenly/life).
-    The resurrection body is the <strong>new covenant identity</strong> of God’s people in Christ.
-  </p>
-
-  <h3>C) Timing anchored to “the end”</h3>
-  <ul>
-    <li>“Then comes the end” (1 Cor 15:24)</li>
-    <li>“We will not all sleep, but we will all be changed” (1 Cor 15:51)</li>
-  </ul>
-  <p>
-    Paul speaks as a first-century apostle within the “end of the age” horizon (1 Cor 10:11; Heb 9:26).
-  </p>
-
-  <hr />
-
-  <h2>5) “Already Raised” Texts: Resurrection as Present Reality</h2>
-  <p>
-    The New Testament repeatedly speaks of resurrection life as something believers possess now.
-  </p>
-  <ul>
-    <li>“Made us alive… and raised us up with him” (Eph 2:5–6)</li>
-    <li>“Buried with him… raised with him through faith” (Col 2:12–13)</li>
-    <li>“If then you were raised together with Christ” (Col 3:1–4)</li>
-    <li>“Has passed out of death into life” (John 5:24)</li>
-    <li>“We know that we have passed out of death into life” (1 John 3:14)</li>
-  </ul>
-  <div class="callout">
-    <p>
-      If resurrection is only future, these passages become awkward or “just positional talk.”
-      Scripture treats them as real: a present participation in Christ’s victory.
-    </p>
-  </div>
-
-  <hr />
-
-  <h2>6) Hebrews: The Covenant Shift That Ends the Old “Death-Order”</h2>
-  <p>
-    Hebrews frames the transition from the old system to the new as an actual shift of access, standing, and covenant reality.
-  </p>
-  <ul>
-    <li>Old covenant “becoming old and growing aged” and “near to vanishing away” (Heb 8:13)</li>
-    <li>Christ appears “at the consummation of the ages” to put away sin (Heb 9:26)</li>
-    <li>One offering perfects forever and removes the need for repeat sacrifices (Heb 10:10–14)</li>
-    <li>“The way into the holy place was not yet made manifest” while the first tabernacle stood (Heb 9:8)</li>
-    <li>Believers come to the heavenly Jerusalem now (Heb 12:22–24)</li>
-  </ul>
-
-  <hr />
-
-  <h2>7) Revelation: Death Removed, Life Unveiled</h2>
-  <p>
-    Revelation’s arc moves from covenant judgment to New Creation life: the removal of death’s rule and the unveiling of God-with-us.
-  </p>
-  <ul>
-    <li>“Blessed and holy is he who has part in the first resurrection” (Rev 20:6)</li>
-    <li>“Death and Hades were thrown into the lake of fire” (Rev 20:14)</li>
-    <li>New creation climax: “death will be no more” (Rev 21:4)</li>
-    <li>“Behold, I make all things new” (Rev 21:5)</li>
-    <li>“The tabernacle of God is with men” (Rev 21:3)</li>
-  </ul>
-
-  <hr />
-
-  <h2>8) What Resurrection Means Now</h2>
-  <ul>
-    <li><strong>Freedom:</strong> condemnation is not your operating environment (Rom 8:1–4)</li>
-    <li><strong>Identity:</strong> you are new creation, not “old man with a religious add-on” (2 Cor 5:17; Eph 4:22–24)</li>
-    <li><strong>Holiness:</strong> you live from life, not fear of death (Rom 6:4–11; Col 3:1–10)</li>
-    <li><strong>Assurance:</strong> resurrection life is Christ’s present gift (John 11:25–26; 1 John 5:11–13)</li>
-    <li><strong>Mission:</strong> reconciliation is the fruit of resurrection life (2 Cor 5:18–21)</li>
-  </ul>
-
-  <div class="callout">
-    <p><strong>Plainly:</strong> we don’t “wait to become alive.” We live because life has been given. Resurrection is not a distant carrot; it is the covenant reality of the New Creation in Christ.</p>
-  </div>
-
-  <hr />
-
-  <h2>Quick Reference List</h2>
-  <p class="meta">Use this list when cross-linking pages across FPBible.</p>
-  <ul>
-    <li><strong>Core:</strong> 1 Cor 15; Rom 5–8; 2 Cor 3–5; Eph 2; Col 2–3; Heb 8–10; Heb 12; John 5; John 11; 1 John 3; 1 John 5</li>
-    <li><strong>Prophets:</strong> Ezek 37; Isa 25–26; Hos 6; Dan 12</li>
-    <li><strong>Climax:</strong> Matt 24; Luke 21; 1 Cor 10:11; Heb 9:26; Rev 20–22</li>
-  </ul>
-
-  <hr />
-
-  <p class="meta">
-    FPBible — Resurrection (Fulfilled). Keep language clean: no futurist drift, no “already/not yet” hedging.
-  </p>
+</div>
 </body>
 </html>
